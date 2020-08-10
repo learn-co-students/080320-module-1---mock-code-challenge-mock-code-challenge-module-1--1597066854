@@ -17,7 +17,7 @@ class Passenger
     end
 
     def rides
-        Ride.all.filter {|r| r.Passenger == self};
+        Ride.all.filter {|r| r.passenger == self};
     end
 
 
