@@ -18,14 +18,13 @@ class Ride
         else
             @passenger = passenger;
             @driver = driver;
-            @distance = distance.to_f;
+            @distance = distance;
+            self.class.all.push(self);
         end
-
-        self.class.all.push(self);
     end
 
     def self.average_distance
-        (self.all.reduce(0){|sum, el| sum + el.distance}) / self.all.length;
+        (self.all.reduce(0){|sum, r| sum + r.distance}) / self.all.length;
     end
 end
 
