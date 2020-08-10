@@ -25,14 +25,22 @@ class Passenger
     end.uniq
   end
 
+  def total_distance
+    all_rides = self.rides.map do |ride|
+      ride.distance
+    end
+    length = all_rides.length
+    all_rides = all_rides.sum
+    all_rides/length
+  end
+
 end
 
 # #### Passenger
 
 
 
-# - `Passenger#drivers`
-#   - Returns an array of Driver instances that this person has rode with
+
 # - `Passenger#total_distance`
 #   - Returns the floating number that represents the total distance the passenger has travelled using the service
 
@@ -49,3 +57,5 @@ end
 
 # - `Passenger.all`
 #   - Returns an array of all Passengers
+# - `Passenger#drivers`
+#   - Returns an array of Driver instances that this person has rode with
