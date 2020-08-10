@@ -27,6 +27,7 @@ r4 = Ride.new(d4, p4, 2.8)
 r5 = Ride.new(d2, p4, 7.8)
 r6 = Ride.new(d1, p3, 3.3)
 r7 = Ride.new(d1, p3, 4.4)
+r8 = Ride.new(d2, p3, 109.9)
 
 
 binding.pry
