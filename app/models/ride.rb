@@ -8,6 +8,7 @@ class Ride
 
     def self.average_distance
         #  average distance across all rides
+        (Ride.all.sum {|ride| ride.distance}/ Ride.all.length)
     end
     
     def initialize(driver, passenger, distance)
