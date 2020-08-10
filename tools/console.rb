@@ -16,7 +16,7 @@ testD2 = Driver.new('lemon');
 testD3 = Driver.new('butat');
 
 ride1 = Ride.new(testP1, testD1, 200)
-#rideDuplicate = Ride.new(testP1, testD1, 200)
+rideDuplicate = Ride.new(testP1, testD1, 200)
 
 ride2 = Ride.new(testP1, testD2, 200)
 ride3 = Ride.new(testP2, testD1, 200)

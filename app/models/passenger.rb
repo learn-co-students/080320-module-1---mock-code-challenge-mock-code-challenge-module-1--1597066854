@@ -12,7 +12,7 @@ class Passenger
     attr_reader :name;
 
     def initialize(name)
-        @all = name;
+        @name = name;
         self.class.all << self;
     end
 

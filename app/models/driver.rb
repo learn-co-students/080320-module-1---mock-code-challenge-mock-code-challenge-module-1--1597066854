@@ -21,7 +21,7 @@ class Driver
     end
 
     def passenger_names
-        self.rides.map{|r| r.passenger.name}.uniq;
+        self.rides.map{|r| r.passenger.name}
     end
     
     def total_distance
