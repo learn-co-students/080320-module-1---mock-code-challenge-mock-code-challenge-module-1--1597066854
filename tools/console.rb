@@ -13,10 +13,12 @@ grace=Driver.new("Grace")
 annette=Driver.new("Annette")
 gus=Driver.new("Gus")
 miriam=Driver.new("Miriam")
-val_grace=Ride.new("Val","Grace")
-anthony_annette=Ride.new("Anthony", "Annette")
-caryn_gus=Ride.new("Caryn","Gus")
-jallen_miriam=Ride.new("Jallen", "Miriam")
+val_grace=Ride.new(val, grace, 10)
+anthony_annette=Ride.new(anthony, annette, 20)
+caryn_gus=Ride.new(caryn,gus, 40)
+jallen_miriam=Ride.new(jallen, miriam, 60)
+val_miriam=Ride.new(val, miriam, 100.5)
+jallen_gus=Ride.new(jallen, gus, 200.2)
 # Put your variables here~!
 
 binding.pry
