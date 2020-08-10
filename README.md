@@ -1,3 +1,5 @@
+Eddie Lopez
+
 # BetterLyft™ 
 
 ## Deliverables
