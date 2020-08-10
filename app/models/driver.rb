@@ -14,7 +14,7 @@ class Driver
     end
 
     def rides
-        Rides.all.select {|ride| ride.driver == self}
+        Ride.all.select {|ride| ride.driver == self}
     end
 
     def passenger_names
