@@ -4,7 +4,7 @@ class Ride
     @@all = []
 
     def initialize(distance, passenger, driver) #driver instance and passenger instance
-        @distance = distance.to_f #refers to miles
+        @distance = distance.to_f #changes to float and distance refers to miles
         @passenger = passenger
         @driver = driver
         self.class.all << self
@@ -17,7 +17,7 @@ class Ride
     def self.average_distance #Returns the average distance across ALL rides
         self.all.map do |ride|  
             ride.distance
-        end.sum / (self.all.length)
+        end.sum/(self.all.length)
     end
 end
 

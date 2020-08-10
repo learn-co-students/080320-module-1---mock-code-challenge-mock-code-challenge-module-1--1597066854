@@ -23,7 +23,7 @@ class Driver
         end.uniq
     end
 
-    def total_miles_driven
+    def total_miles_driven #created for #mileage_cap method
         rides.map do |ride|
             ride.distance
         end.sum
