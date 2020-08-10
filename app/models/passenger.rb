@@ -18,12 +18,14 @@ class Passenger
     end
 
     def drivers
-        Ride.all.select do |trip|
-            trip.driver == self
+        self.rides.select do |trip|
+            trip.driver
         end
-        
     end
-
-
+    # def self.premium_members
+    #     rides.select do |d|
+    #          d == driver.distance > 100
+    #     end
+    # end
 
 end

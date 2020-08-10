@@ -18,5 +18,6 @@ pass3 = Passenger.new("chris")
 
 ride1 = Ride.new(driver1, pass1, 1.5)
 ride2 = Ride.new(driver2, pass2, 2.5)
+ride3 = Ride.new(driver3, pass3, 110.2)
 
 binding.pry
