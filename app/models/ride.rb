@@ -26,11 +26,9 @@ attr_accessor :driver, :passenger, :distance
     end
 
     def self.average_distance
-        Ride.all.select do |rides|
-            rides.distance 
-            return distance
-        end
+        sum = Ride.all.map{|rides| rides.distance} 
+        sum.sum / sum.length 
     end
-
+    
 
 end

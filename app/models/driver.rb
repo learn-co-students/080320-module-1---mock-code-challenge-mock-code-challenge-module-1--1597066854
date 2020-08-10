@@ -28,8 +28,10 @@ class Driver
     end
 
 
-    # def mileage_cap(distance)
-    # end
+    def self.average_distance
+        sum = Ride.all.map{|rides| rides.distance} 
+        sum.sum / sum.length 
+    end
 
 
 end 
