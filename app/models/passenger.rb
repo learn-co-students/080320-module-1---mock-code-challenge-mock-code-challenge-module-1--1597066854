@@ -14,22 +14,22 @@ class Passenger
         @@all
     end 
 
-    def premium_members
-    
+    def self.premium_members
+        self.all.filter { | passenger| passenger.total_distance > 100 }
     end 
 
     ##instance methods
 
     def rides
-
+        Ride.all.filter { |ride| ride.passenger == self }
     end 
 
     def drivers
-
+        self.rides.map { |ride| ride.driver}
     end 
 
     def total_distance
-
+        self.rides.map { |ride| ride.distance }.reduce { |sum, n| sum + n}
     end 
 
 end 
