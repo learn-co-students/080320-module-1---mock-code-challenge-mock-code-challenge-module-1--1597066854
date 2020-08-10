@@ -11,9 +11,10 @@ class Ride
     attr_accessor :passenger, :driver, :distance
 
     def initialize(passenger, driver, distance)
-
-        if self.class.all.find{|r| r.passenger == passenger and r.driver == driver and r.distance == distance}
-            break;
+        query = self.class.all.find{|r| r.passenger == passenger and r.driver == driver and r.distance == distance};
+        
+        if query
+            query;
         else
             @passenger = passenger;
             @driver = driver;
