@@ -11,6 +11,10 @@ def self.all
     @@all
 end
 
+def name 
+    @name 
+end
+
 
 def rides 
     Ride.all.select do |rides|
@@ -21,9 +25,15 @@ end
 def drivers
     rides.map do |rides|
         rides.driver
-    end
+    end.uniq 
 end
 
+# def total_distance
+    
+#     end
+# end
 
+# def premium_members
+# end
 
 end

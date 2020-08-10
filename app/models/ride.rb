@@ -13,5 +13,24 @@ attr_accessor :driver, :passenger, :distance
         @@all
     end
 
+    def passenger
+        @passenger
+    end
+
+    def driver
+        @driver
+    end
+
+    def distance
+        @distance
+    end
+
+    def self.average_distance
+        Ride.all.select do |rides|
+            rides.distance 
+            return distance
+        end
+    end
+
 
 end

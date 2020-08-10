@@ -15,11 +15,11 @@ angela = Driver.new("Angela")
 moe = Driver.new("Moe")
 oscar = Driver.new("Oscar")
 
-ride1 = Ride.new(angela, tom, 50)
-ride2 = Ride.new(moe, larry, 25)
-ride3 = Ride.new(oscar, tom, 30)
-ride4 = Ride.new(angela, sally, 40)
-ride5 = Ride.new(angela, tom, 20)
+ride1 = Ride.new(angela, tom, 50.2)
+ride2 = Ride.new(moe, larry, 25.0)
+ride3 = Ride.new(oscar, tom, 30.4)
+ride4 = Ride.new(angela, sally, 40.1)
+ride5 = Ride.new(angela, tom, 20.7)
 
 
 # Put your variables here~!
