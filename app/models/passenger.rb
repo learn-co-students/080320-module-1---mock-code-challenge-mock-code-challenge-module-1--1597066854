@@ -2,10 +2,11 @@
 class Passenger
     @@all =[] 
     
-    attr_accessor :name
+    attr_accessor :name :driver
 
     def initialize (name)
         @name = name
+        @driver = driver #source of truth for idintifying the driver(owner)
         @@all << self
     end
 
@@ -14,11 +15,13 @@ class Passenger
             rides.passenger == self
     end
 
-    def total_distance #returns the floating number that represents the total distance the passenger has travelled using the service
-    
+    def total_distance # i need to goto source of truth ,ride class, and pull out
+            self.rides.filter do |ele|
+                ele.distance == "distance"
+        
     end
 
-    def all
+    def all   #implicit
         @@all
     end
 
