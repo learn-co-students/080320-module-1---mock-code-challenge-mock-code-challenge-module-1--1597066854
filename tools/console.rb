@@ -13,7 +13,7 @@ d2 = Driver.new("Judy")
 d3 = Driver.new("Jordan")
 d4 = Driver.new("Rachael")
 
-###### PASSENGER ######
+##### PASSENGER ######
 p1 = Passenger.new("Blade")
 p2 = Passenger.new("Toni")
 p3 = Passenger.new("Juan")
@@ -26,6 +26,7 @@ r3 = Ride.new(d3, p3, 3.2)
 r4 = Ride.new(d4, p4, 2.8)
 r5 = Ride.new(d2, p4, 7.8)
 r6 = Ride.new(d1, p3, 3.3)
+r7 = Ride.new(d1, p3, 4.4)
 
 
 binding.pry
