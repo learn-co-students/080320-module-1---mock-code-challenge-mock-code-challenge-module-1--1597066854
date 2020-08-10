@@ -11,6 +11,10 @@ tom = Passenger.new("Tom")
 larry = Passenger.new("Harry")
 sally = Passenger.new("Sally")
 
+angela = Driver.new("Angela")
+moe = Driver.new("Moe")
+oscar = Driver.new("Oscar")
+
 
 # Put your variables here~!
 
