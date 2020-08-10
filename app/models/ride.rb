@@ -21,12 +21,11 @@ class Ride
         end
     end
 
-
-
     def self.average_distance
         mean = self.total_distance / self.all.count do |v|
             v.distance
         end
         mean
     end
+    
 end
