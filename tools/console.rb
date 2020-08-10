@@ -20,10 +20,10 @@ sal = Driver.new("sal")
 
 #ride
 one = Ride.new(5.2, sam, louis)
-one = Ride.new(8.9, rob, louis)
-one = Ride.new(2, jerry, fred)
-one = Ride.new(1.333, sam, sal)
-one = Ride.new(90, sam, louis)
-one = Ride.new(100, jerry, fred)
+two = Ride.new(8.9, rob, louis)
+three = Ride.new(2, jerry, fred)
+four = Ride.new(1.333, sam, sal)
+five = Ride.new(90, sam, louis)
+six = Ride.new(100, jerry, fred)
 
 binding.pry
