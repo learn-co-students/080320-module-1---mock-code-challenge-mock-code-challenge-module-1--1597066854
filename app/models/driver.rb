@@ -24,17 +24,10 @@ class Driver
     end.uniq
 end
 
- 
-
-
-
 #     def self.mileage_cap(distance)
 #         rides.select do |travel|
 #         if travel.select > driver(distance)
 #         end
 #     end
 # end
-
-
-
 end
