@@ -18,5 +18,11 @@ class Driver
      #   end
      #   array
     #end
+    def rides
+        rides_array = []
+        Ride.all.collect 
+    end
+
+
     
 end
