@@ -1,3 +1,5 @@
+Tim Butler
+
 # BetterLyft™ 
 
 ## Deliverables
