@@ -24,6 +24,6 @@ class Ride
     end
 
     def self.average_distance
-        self.all.inject{|sum, trip| sum + trip.distance } / self.all.size
+        self.all.inject(0){|sum, trip| sum + trip.distance } / self.all.size
     end
 end

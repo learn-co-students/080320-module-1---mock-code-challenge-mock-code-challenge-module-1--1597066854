@@ -16,25 +16,29 @@ class Passenger
 
     # instance methods section
     def rides
-        Trip.all.filter do |trip|
-            trip.driver == self
+        Ride.all.filter do |trip|
+            trip.passenger == self
         end
     end
 
     def rides_count
-        self.trips.count
+        self.rides.count
     end
 
     def drivers
-        self.trips.map do |mytrip|
+        self.rides.map do |mytrip|
             mytrip.driver
         end
     end
 
     def total_distance
-        self.rides.inject do |sum, ride|
+        self.rides.inject(0) do |sum, ride|
             sum + ride.distance
         end
+    end
+
+    def ride(driver, distance)
+        Ride.new(self, driver, distance)
     end
 
     # Class methods section
