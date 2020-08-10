@@ -21,8 +21,12 @@ class Driver
     end 
 
     ## 1. Return array of all drivers who have driven over the mileage cap 
-    def milage_cap(distance.to_f)
 
+    def milage_cap(distance)
+        if distance.to_f > milage_cap == true
+            Driver.map do |exceeded_cap|
+                exceeded_cap << self
+        end
     end
 
     def self.all
