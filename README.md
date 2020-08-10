@@ -1,3 +1,5 @@
+Alyssa Lerner
+
 # BetterLyft™ 
 
 ## Deliverables
