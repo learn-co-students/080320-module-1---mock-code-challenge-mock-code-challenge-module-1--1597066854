@@ -36,7 +36,7 @@ class Passenger
             total += pass.total_distance
             arr << pass if total > 100
         end
-        arr
+        arr.uniq
     end
 
     def self.all
