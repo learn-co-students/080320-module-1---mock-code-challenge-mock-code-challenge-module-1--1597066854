@@ -14,8 +14,11 @@ class Passenger
 
     def drivers
         #Returns an array of Driver instances that this person has rode with
-        Ride.all.map { |ride| ride.driver if ride.passenger == self }.compact
-        # Ride.all.reduce { |ride| ride.driver if ride.passenger == self }.compact
+        # Ride.all.map { |ride| ride.driver if ride.passenger == self }.compact
+        
+        # better option according to stack overflow
+        # "This is the most efficient since it only loops over the list with one pass (map + select or compact requires two passes)."
+        Ride.all.reduce([]) { |a, ride| a << ride.driver if ride.passenger == self; a }
     end
 
     def total_distance

@@ -8,7 +8,8 @@ class Driver
 
     def passenger_names
         #Returns an array of all Passengers' names a driver has driven. The names should be **unique** (no repeats).
-        Ride.all.map { |ride| ride.passenger.name if ride.driver == self }.compact.uniq
+        # Ride.all.map { |ride| ride.passenger.name if ride.driver == self }.compact.uniq
+        Ride.all.reduce([]) { |a, ride| a << ride.passenger.name if ride.driver == self; a }.uniq
     end
 
     def rides
@@ -22,7 +23,8 @@ class Driver
 
     def self.mileage_cap(distance)
         #Takes an argument of a distance (float) and returns an array of all Drivers who have driven over the mileage
-        Ride.all.map { |ride| ride.driver if ride.miles > distance }.compact.uniq
+        # Ride.all.map { |ride| ride.driver if ride.miles > distance }.compact.uniq
+        Ride.all.reduce([]) { |a, ride| a << ride.driver if ride.miles > distance; a }.uniq
     end
 
 end
