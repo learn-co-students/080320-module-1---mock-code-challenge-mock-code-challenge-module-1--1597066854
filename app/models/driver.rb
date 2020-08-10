@@ -18,20 +18,23 @@ class Driver
     end
   end
 
-  def passengers_names
+  def passenger_names
     self.rides.map do |ride|
       ride.passenger.name
     end.uniq
   end
 
+  def self.mileage_cap(distance)
+    
+
+  end
 
 
 end
 
 # #### Driver
 
-# - `Driver#passenger_names`
-#   - Returns an array of all Passengers' names a driver has driven. The names should be **unique** (no repeats).
+
 
 
 # - `Driver.mileage_cap(distance)`
@@ -45,3 +48,5 @@ end
 #   - Returns an array of all Rides a driver has made
 # - `Driver.all`
 #   - Returns an array of all Drivers
+# - `Driver#passenger_names`
+#   - Returns an array of all Passengers' names a driver has driven. The names should be **unique** (no repeats).
