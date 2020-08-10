@@ -1,9 +1,12 @@
 
+
+
+
 class Passenger
-    attr_reader :name
+    attr_reader :passname
     @@all = []
-    def initialize(name)
-        @name = name
+    def initialize(passname)
+        @passname = passname
         @@all << self
     end
     def self.all

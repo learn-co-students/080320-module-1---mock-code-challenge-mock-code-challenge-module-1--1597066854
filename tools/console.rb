@@ -7,4 +7,10 @@ end
 
 # Put your variables here~!
 
+passname = [ {:name => "jay"},
+{:name => "ray"},
+{:name => "stacy"},
+{:name => "alice"}
+]
+
 binding.pry
