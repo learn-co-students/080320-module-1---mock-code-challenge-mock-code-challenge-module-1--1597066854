@@ -30,7 +30,7 @@ end
 ##premium members
 ryan = Passenger.new("Ryan")
 alan = Passenger.new("Alan")
-Ride.new(smith, ryan, 101)
-Ride.new(cooper, alan, 150)
+Ride.new(smith, ryan, 101.5)
+Ride.new(cooper, alan, 150.5)
 
 binding.pry

@@ -22,7 +22,7 @@ class Driver
     ##instance methods
 
     def total_distance
-        self.rides.map {|ride| ride.distance }.reduce {|sum, n| sum + n }
+        self.rides.map {|ride| ride.distance }.reduce {|sum, n| sum + n }.round(2)
     end 
 
     def passenger_names

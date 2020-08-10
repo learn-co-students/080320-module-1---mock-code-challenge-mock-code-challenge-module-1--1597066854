@@ -16,7 +16,7 @@ class Ride
     end 
 
     def self.average_distance
-        self.all.map { |ride| ride.distance }.reduce {|sum, n| sum + n } / self.all.count
+        (self.all.map { |ride| ride.distance }.reduce {|sum, n| sum + n } / self.all.count).round(2)
     end 
 
 end 
