@@ -16,6 +16,11 @@ class Passenger
     end
 
     def drivers
+        Ride.all.select do |x|
+            if x.passenger == self
+                x.driver
+            end
+        end
     end
 
     def total_distance
