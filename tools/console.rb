@@ -19,6 +19,7 @@ caryn_gus=Ride.new(caryn,gus, 40)
 jallen_miriam=Ride.new(jallen, miriam, 60)
 val_miriam=Ride.new(val, miriam, 100.5)
 jallen_gus=Ride.new(jallen, gus, 200.2)
+val_miriam2=Ride.new(val, miriam, 50)
 # Put your variables here~!
 
 binding.pry
