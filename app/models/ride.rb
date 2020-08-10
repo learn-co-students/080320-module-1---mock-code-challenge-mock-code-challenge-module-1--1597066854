@@ -14,9 +14,22 @@ class Ride
     @@all
   end
 
+  def self.average_distance
+    rides = Ride.all.map do |ride|
+      ride.distance
+    end
+    length = rides.length
+    rides = rides.sum
+    rides/length
+  end
 end
 
 # #### Ride
+
+
+
+
+
 # A Ride should be initialized with a driver (as a Driver object), a passenger (as a Passenger object), and a distance (as a float i.e. `3.2`). The distance refers to miles.
 # - `Ride#passenger`
 #   - Returns the Passenger object for that ride
