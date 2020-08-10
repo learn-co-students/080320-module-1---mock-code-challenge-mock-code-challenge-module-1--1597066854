@@ -1,3 +1,5 @@
+Alex Sahli
+
 # BetterLyft™ 
 
 ## Deliverables
