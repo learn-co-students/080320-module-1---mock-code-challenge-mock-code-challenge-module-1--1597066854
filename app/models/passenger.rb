@@ -24,6 +24,14 @@ class Passenger
     end
 
     def total_distance
+        tripmiles = Ride.all.select do |x|
+            x.passenger == self
+            end
+        totalmiles = tripmiles.map do |x|
+            x.distance 
+        end   
+        totalmiles.sum
+        "#{self.name} has travelled #{totalmiles.sum} miles with BetterLyft!"
     end
 
     def self.all

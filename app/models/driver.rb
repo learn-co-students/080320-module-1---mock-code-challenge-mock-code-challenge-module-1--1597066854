@@ -9,12 +9,15 @@ class Driver
         @@all_drivers << self
     end
 
-    def passenger_names
-    end
-
     def rides
         Ride.all.select do |x|
             x.driver == self
+        end
+    end
+
+    def passenger_names
+        self.rides.collect do |x|
+            x.passenger
         end
     end
 
@@ -23,5 +26,13 @@ class Driver
     end
 
     def self.mileage_cap distance
+        over = Ride.all.select do |x|
+           if x.distance > distance
+            x.driver
+            end
+        end
+        over.collect do |x|
+            x.driver
+        end
     end
 end
