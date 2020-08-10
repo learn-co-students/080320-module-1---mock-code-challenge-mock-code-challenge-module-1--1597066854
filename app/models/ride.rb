@@ -15,9 +15,18 @@ class Ride
         @@all
     end
 
-    # def self.average_distance
-    #     self.all.map do |v|
-    #         v.distance
-    #     end
-    # end
+    def self.total_distance
+        Ride.all.sum do |e|
+            e.distance
+        end
+    end
+
+
+
+    def self.average_distance
+        mean = self.total_distance / self.all.count do |v|
+            v.distance
+        end
+        mean
+    end
 end

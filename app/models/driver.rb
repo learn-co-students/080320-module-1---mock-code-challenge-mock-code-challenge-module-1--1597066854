@@ -19,9 +19,17 @@ class Driver
         end
     end
 
-    # def self.mileage_cap_distance(cap)
-    #     self.rides.map do |e|
-    #         e.distance > cap
-    #     end
-    # end
+    def total_distance
+        rides.sum(0.0) do |e|
+            e.distance
+        end
+    end
+
+    def self.mileage_cap_distance(cap)
+        Ride.all.select do |e|
+            e.driver.total_distance > cap
+        end.map do |e|
+            e.driver
+        end.uniq
+    end
 end
