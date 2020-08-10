@@ -21,7 +21,7 @@ class Passenger
         Ride.all.select do |trip|
             trip.driver == self
         end
-
+        
     end
 
 
