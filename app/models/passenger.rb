@@ -33,7 +33,7 @@ class Passenger
     
     def self.premium_members
         Ride.all.select do |e|
-            e.distance > 100
+            e.distance > 100.0
         end.map do |v|
             v.passenger
         end
