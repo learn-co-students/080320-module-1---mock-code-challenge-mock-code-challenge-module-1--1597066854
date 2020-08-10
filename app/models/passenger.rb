@@ -12,10 +12,7 @@ class Passenger
         @@all
     end
 
-    def name(name)
-        @name
-    end
-
+  
     def rides
         Ride.all.filter {|ride| ride.passenger == self}
     end
@@ -27,7 +24,12 @@ class Passenger
     end
 
     def total_distance
-        
+        total = 0
+        self.rides.each do |ride|
+            total += ride.distance 
+        end
+        total
+    end
 
 
 end
