@@ -1,3 +1,5 @@
+Teddy Bradsher
+
 # BetterLyft™ 
 
 ## Deliverables
