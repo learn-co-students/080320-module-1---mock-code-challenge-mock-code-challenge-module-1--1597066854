@@ -39,5 +39,10 @@ class Passenger
     end
 
     def self.premium_members
+        Ride.all.select do |x|
+            if x.distance > 100
+                x.passenger
+            end
+        end
     end
 end

@@ -33,11 +33,9 @@ A Passenger should be initialized with a name as a string. After the Passenger h
 - `Passenger.all`
   - Returns an array of all Passengers
 
-<=== Working On ===>
- 
-
 - `Passenger#total_distance`
   - Returns the floating number that represents the total distance the passenger has travelled using the service
+
 - `Passenger.premium_members`
   - Returns an array of all Passengers who have travelled over 100 miles in total with the service
 
@@ -66,11 +64,10 @@ A Driver should be initialized with a name as a string.
   - Returns an array of all Rides a driver has made
 - `Driver.all`
   - Returns an array of all Drivers
-
-<=== Working On ===>
- 
 - `Driver#passenger_names`
   - Returns an array of all Passengers' names a driver has driven. The names should be **unique** (no repeats).
+  
 - `Driver.mileage_cap(distance)`
   - Takes an argument of a distance (float) and returns an array of all Drivers who have driven over the mileage
+
 
