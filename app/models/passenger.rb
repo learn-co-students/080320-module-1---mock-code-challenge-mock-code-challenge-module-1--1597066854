@@ -9,16 +9,12 @@ class Passenger
 
     def rides
         #returns all rides self has been on
-        arr = []
-        Ride.all.each { |ride| arr << ride if ride.passenger == self }
-        arr
+        Ride.all.select { |ride| ride.passenger == self }
     end
 
     def drivers
         #Returns an array of Driver instances that this person has rode with
-        arr = []
-        Ride.all.each { |ride| arr << ride.driver if ride.passenger == self }
-        arr
+        Ride.all.map { |ride| ride.driver if ride.passenger == self }.compact
     end
 
     def total_distance
@@ -30,13 +26,11 @@ class Passenger
 
     def self.premium_member
         #Returns an array of all Passengers who have travelled over 100 miles in total with the service
-        arr = []
-        @@all.each do |pass|
+        @@all.select do |pass|
             total = 0
             total += pass.total_distance
-            arr << pass if total > 100
-        end
-        arr.uniq
+            total > 100
+        end.uniq
     end
 
     def self.all

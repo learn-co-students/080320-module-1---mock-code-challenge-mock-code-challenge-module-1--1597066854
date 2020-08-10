@@ -16,8 +16,8 @@ driver3 = Driver.new("Vince")
 
 ride1 = Ride.new(driver1, pass1, 3.2)
 ride2 = Ride.new(driver2, pass2, 100.8)
-ride3 = Ride.new(driver3, pass3, 57.0)
+ride3 = Ride.new(driver3, pass3, 57)
 ride4 = Ride.new(driver2, pass3, 24.4)
-ride1 = Ride.new(driver1, pass3, 39.2)
+ride5 = Ride.new(driver1, pass3, 39.2)
 
 binding.pry

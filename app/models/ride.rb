@@ -27,6 +27,9 @@ class Ride
 
     def self.average_distance
         #Returns the average distance across ALL rides
+        avg = 0
+        @@all.each { |ride| avg += ride.miles}
+        avg / @@all.length
     end
 
 end
