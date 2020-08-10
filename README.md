@@ -1,3 +1,5 @@
+Erik Zhao
+
 # BetterLyft™ 
 
 ## Deliverables
