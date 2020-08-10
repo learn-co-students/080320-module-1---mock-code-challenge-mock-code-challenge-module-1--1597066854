@@ -5,6 +5,5 @@ def reload
 end
 
 
-# Put your variables here~!
 
 binding.pry
