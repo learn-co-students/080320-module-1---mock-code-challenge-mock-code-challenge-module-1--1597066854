@@ -1,6 +1,6 @@
 class Ride
 
-    attr_reader :driver, :passenger
+    attr_reader :driver, :passenger, :distance
     @@all = []
 
     def initialize(driver, passenger, distance)
@@ -11,7 +11,7 @@ class Ride
     end
 
     def self.all
-        @all
+        @@all
     end
 
     def self.average_distance

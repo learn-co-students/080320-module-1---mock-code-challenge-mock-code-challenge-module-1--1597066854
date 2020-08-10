@@ -13,7 +13,11 @@ class Passenger
     end
 
     def take_ride(driver, dist_float)
-        Ride.new(driver, self, dist_float)
+        if driver.class == Driver
+            Ride.new(driver, self, dist_float)
+        else
+            puts "Can't take rides from other passengers. Please enter a driver instance"
+        end
     end
 
     def rides

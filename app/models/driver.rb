@@ -14,7 +14,11 @@ class Driver
     end
 
     def pickup_ride(passenger, dist_float)
-        Passenger.new(self, passenger, dist_float)
+        if passenger.class == Passenger
+            Ride.new(self, passenger, dist_float)
+        else
+            puts "Can't pick-up other Drivers. Please enter a passenger instance"
+        end
     end
 
     def rides
