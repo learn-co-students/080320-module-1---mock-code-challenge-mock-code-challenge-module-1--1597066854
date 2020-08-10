@@ -12,6 +12,10 @@ class Passenger
         @@all
     end
 
+    def take_ride(driver, dist_float)
+        Ride.new(driver, self, dist_float)
+    end
+
     def rides
         Ride.all.select {|ride| ride.passenger == self}
     end
