@@ -17,13 +17,14 @@ class Passenger
     end
 
     def drivers
-        rides.map{|ride| ride.driver}
+        rides.map{|ride| ride.driver}.uniq
     end
 
     def total_distance
-        total = 0
-        rides.each{|ride| total += ride.distance}
-        total
+        # total = 0
+        # rides.each{|ride| total += ride.distance}
+        # total
+        rides.reduce(0) { |sum, ride| sum + ride.distance }
     end
 
     def self.premium_members
