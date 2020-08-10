@@ -7,5 +7,9 @@ class Ride
         @passenger = passenger
         @distance = 0.0
     end
+
+    def self.average_distance
+        self.distance.inject{ |sum, el| sum + el }.to_f / self.distance.size
+    end
     
 end
