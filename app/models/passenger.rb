@@ -26,5 +26,12 @@ class Passenger
         end
     end
 
+    def total_distance
+        total = 0.0
+        self.rides.each do |ride|
+            total += ride.distance
+        end
+        total
+    end
 end
 
