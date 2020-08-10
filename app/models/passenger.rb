@@ -16,7 +16,7 @@ class Passenger
 
     def rides
         my_rides = []
-        ride.all.select do |ride|
+        Ride.all.select do |ride|
             if ride.passenger == self
                 my_rides.push(ride)
             end
@@ -26,7 +26,7 @@ class Passenger
 
     def drivers
         my_drivers = []
-        ride.all.select do |ride|
+        Ride.all.select do |ride|
             if ride.passenger == self
                 my_drivers.push(ride.driver)
             end
@@ -36,7 +36,7 @@ class Passenger
 
     def total_distance
         my_distance = []
-        ride.all.select do |ride|
+        Ride.all.select do |ride|
             if ride.passenger == self
                 my_distance.push(ride.distance)
             end
@@ -47,11 +47,14 @@ class Passenger
     # class methods
 
     def self.premium_members
+        prem_mem = []
+
         passenger_count = Hash.new(0)
-        ride.each do |ride|
+        Ride.all.each do |ride|
             passenger_count[ride.passenger] += ride.distance
         end
-        passenger_count.select {|k,v| v >= 100}
+        prem_mem.push(passenger_count.select {|k,v| v >= 100})
+        prem_mem
     end
 
     def self.all

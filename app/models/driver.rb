@@ -2,15 +2,18 @@
 class Driver
 
     attr_accessor :name
+    @@all = []
 
     def initialize(name)
         @name = name
+
+        @@all.push(self)
     end
 
     #instance methods
     def passenger_names
         my_passengers = []
-        ride.all.select do |ride|
+        Ride.all.select do |ride|
             if ride.driver == self
                 my_passengers.push(ride.passenger)
             end
@@ -20,7 +23,7 @@ class Driver
 
     def rides
         my_rides = []
-        ride.alls.select do |ride|
+        Ride.alls.select do |ride|
             if ride.driver == self
                 my_rides.push(ride)
             end
@@ -30,20 +33,11 @@ class Driver
     #class methods
     def self.mileage_cap(distance)
         ##
-        total_distance = []
-        passenger_count = Hash.new(0)
-        ride.each do |ride|
-            passenger_count[ride.passenger] += ride.distance
+        total_distance = Hash.new(0)
+        Ride.each do |ride|
+            total_distance[ride.driver] += ride.distance
         end
-        passenger_count.select {|k,v| v >= 100}
-        
-        
-        
-        distance_drivers = []
-        ride.all.select do |ride|
-            if 
-            distance_drivers
-        end
+        total_distance.select {|k,v| v > distance}
     end
 
     def self.all
