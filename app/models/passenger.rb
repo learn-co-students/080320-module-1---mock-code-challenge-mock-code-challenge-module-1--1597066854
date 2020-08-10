@@ -17,6 +17,13 @@ class Passenger
         end 
     end
 
+    def drivers
+        Ride.all.select do |trip|
+            trip.driver == self
+        end
+
+    end
+
 
 
 end
