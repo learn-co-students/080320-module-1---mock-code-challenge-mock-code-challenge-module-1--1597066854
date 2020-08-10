@@ -1,3 +1,6 @@
+Adam Smolenski
+
+
 # BetterLyft™ 
 
 ## Deliverables
