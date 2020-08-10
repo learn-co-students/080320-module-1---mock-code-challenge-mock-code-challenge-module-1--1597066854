@@ -16,4 +16,6 @@ emily = Driver.new("Emily")
 kevin = Driver.new("Kevin")
 randy = Driver.new("Randy")
 
+new_ride = Ride.new("Emily", "Joe", 3.5)
+
 binding.pry
