@@ -12,7 +12,7 @@ class Driver
     end
 
     def rides
-        self.all.filter {|ride| ride.dricer == self}
+        Ride.all.filter {|ride| ride.driver == self}
     end
 
     def passenger_name
@@ -23,8 +23,6 @@ class Driver
 
     def self.milage_cap(distance)
     end
-    
-        
 
 
 end

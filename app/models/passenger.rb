@@ -1,6 +1,7 @@
 
 class Passenger
     attr_reader :name
+    
     @@all = []
 
     def initialize (name)
@@ -25,7 +26,7 @@ class Passenger
 
     def total_distance
         total = 0
-        self.rides.each do |ride|
+        rides.each do |ride|
             total += ride.distance 
         end
         total
