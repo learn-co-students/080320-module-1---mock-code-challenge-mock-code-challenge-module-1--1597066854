@@ -16,7 +16,7 @@ class Ride
     end
 
     def self.total_distance
-        Ride.all.sum do |e|
+        Ride.all.sum(0.0) do |e|
             e.distance
         end
     end

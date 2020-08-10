@@ -25,6 +25,14 @@ class Driver
         end
     end
 
+    def passenger_names
+        rides.map do |e|
+            e.passenger
+        end.select do |e|
+            e.name
+        end.uniq
+    end
+
     def self.mileage_cap_distance(cap)
         Ride.all.select do |e|
             e.driver.total_distance > cap
