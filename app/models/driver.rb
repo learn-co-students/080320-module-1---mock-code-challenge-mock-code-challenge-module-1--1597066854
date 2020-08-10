@@ -11,6 +11,10 @@ class Driver
         @@all
     end
 
+    def name
+        @name
+    end
+
     def rides
         Ride.all.select do |rides|
             rides.driver == self
@@ -22,6 +26,10 @@ class Driver
             rides.passenger
         end.uniq
     end
+
+
+    # def mileage_cap(distance)
+    # end
 
 
 end 
