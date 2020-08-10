@@ -6,4 +6,10 @@ end
 
 
 # Put your variables here~!
+
+###### DRIVER ######
+d1 = 
+
+###### PASSENGER ######
+###### RIDE ######
 binding.pry
