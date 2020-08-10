@@ -3,12 +3,12 @@ class Passenger
     attr_reader :name #so name cannot be changed
     @@all = []
 
-    def initialize(name)
+    def initialize(name) #initialzie with passenger name as string
         @name = name
         self.class.all << self
     end
 
-    def self.all
+    def self.all #returns all passengers in an array
         @@all
     end
 

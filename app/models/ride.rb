@@ -10,11 +10,11 @@ class Ride
         self.class.all << self
     end
 
-    def self.all
+    def self.all #stores all info about passenger and driver association
         @@all
     end
 
-    def self.average_distance #Returns the average distance across ALL rides
+    def self.average_distance #returns the average distance across ALL rides
         self.all.map do |ride|  
             ride.distance
         end.sum/(self.all.length)
