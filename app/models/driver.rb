@@ -1,5 +1,5 @@
 class Driver
-    attr_accessor :name
+    attr_accessor :name # accessor bc readme doesn't say this shouldn't be changed (even though it says passenger names shouldn't)
     @@all = []
 
     def initialize(name)
