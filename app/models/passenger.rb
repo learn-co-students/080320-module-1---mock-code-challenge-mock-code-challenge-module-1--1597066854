@@ -32,11 +32,13 @@ class Passenger
         distance.inject(:+) 
     end
     
-    def self.premium_members   ##the class only knows passenger names? Go to Ride.all
-        if self.total_distance > 100.0
-            @@premium_members << self
-        end 
-    end 
+   
+   ##this class only knows passenger names. Ride.all contains all distances
+   
+    # def self.premium_members   
+    #     if 
+    #     end 
+    # end 
 
     def self.all
         @@all
