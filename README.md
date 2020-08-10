@@ -1,3 +1,6 @@
+Matt Ericksen
+gituser: Mattie43
+
 # BetterLyft™ 
 
 ## Deliverables
