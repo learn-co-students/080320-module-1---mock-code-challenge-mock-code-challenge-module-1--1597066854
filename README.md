@@ -1,3 +1,5 @@
+Madeline Stalter
+
 # BetterLyft™ 
 
 ## Deliverables
