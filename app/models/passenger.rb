@@ -31,7 +31,11 @@ class Passenger
     end.sum
   end
 
-  ##need to get the total distance for each person first
+  def self.premium_members
+    Passenger.all.select do |passenger|
+      passenger.total_distance > 100
+    end
+  end
 
 end
 
@@ -39,8 +43,7 @@ end
 
 
 
-# - `Passenger.premium_members`
-#   - Returns an array of all Passengers who have travelled over 100 miles in total with the service
+
 
 
 
@@ -58,3 +61,5 @@ end
 #   - Returns an array of all Passengers
 # - `Passenger#drivers`
 #   - Returns an array of Driver instances that this person has rode with
+# - `Passenger.premium_members`
+#   - Returns an array of all Passengers who have travelled over 100 miles in total with the service

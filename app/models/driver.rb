@@ -24,11 +24,17 @@ class Driver
     end.uniq
   end
 
-  def self.mileage_cap(distance)
-    
-
+  def total_distance_driven
+    self.rides.map do |ride|
+      ride.distance
+    end.sum
   end
 
+  def self.mileage_cap(distance)
+    Driver.all.select do |driver|
+      driver.total_distance_driven > distance
+    end
+  end
 
 end
 
