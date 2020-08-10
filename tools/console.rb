@@ -34,6 +34,6 @@ rides = [
 
 drivername.each { |driver| Driver.new(driver[:drivername])}
 passname.each { |passenger| Passenger.new(passenger[:passname])}
-rides.each {|ride| Ride.new(ride[:distance])}
+#rides.each {|ride| Ride.new(ride[:distance])}
 
 binding.pry
