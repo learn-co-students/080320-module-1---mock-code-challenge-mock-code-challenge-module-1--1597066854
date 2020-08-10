@@ -1,4 +1,6 @@
-Cannigia Laluw
+CANNIGIA LALUW
+
+
 # BetterLyft™  
 
 ## Deliverables
