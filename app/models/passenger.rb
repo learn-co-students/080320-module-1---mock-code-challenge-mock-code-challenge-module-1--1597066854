@@ -15,13 +15,14 @@ class Passenger
     def drivers
         #Returns an array of Driver instances that this person has rode with
         Ride.all.map { |ride| ride.driver if ride.passenger == self }.compact
+        # Ride.all.reduce { |ride| ride.driver if ride.passenger == self }.compact
     end
 
     def total_distance
         #Returns the floating number that represents the total distance the passenger has travelled using the service
         distance = 0
         Ride.all.each { |ride| distance += ride.miles if ride.passenger == self }
-        distance
+        distance.truncate(2)
     end
 
     def self.premium_member
