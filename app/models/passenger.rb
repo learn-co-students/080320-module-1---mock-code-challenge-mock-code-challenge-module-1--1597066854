@@ -21,8 +21,12 @@ class Passenger
          self.rides.map{|pr| pr.driver}   
     end
 
-    def premium_members
-        
+    def self.premium_members
+        Ride.all.select do |ride|
+            if ride.distance > 100
+                ride.passenger
+            end
+        end
         
         # Returns an array of all Passengers who have travelled over 100 miles in total with the service
     end

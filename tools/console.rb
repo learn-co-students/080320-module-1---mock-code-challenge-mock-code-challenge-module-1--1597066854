@@ -22,7 +22,7 @@ r1 = Ride.new(ed, steph, 3.5)
 r2 = Ride.new(ed, jill, 3.8)
 r3 = Ride.new(ted, margo, 2.9)
 r4 = Ride.new(jeff, liz, 5.3)
-r5 = Ride.new(jeff, hill, 7.2)
+r5 = Ride.new(jeff, hill, 105)
 
 
 

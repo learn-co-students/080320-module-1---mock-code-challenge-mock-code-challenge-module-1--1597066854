@@ -21,8 +21,13 @@ class Driver
          self.rides.map{|pr| pr.passenger}.uniq   
     end
 
-    def mileage_cap(distance)
-        
+    def self.mileage_cap(distance_cap)
+        Ride.all.select do |ride|
+            if ride.distance > distance_cap
+                ride.driver
+            end
+            # Takes an argument of a distance (float) and returns an array of all Drivers who have driven over the mileage
+        end
     end
 
 end

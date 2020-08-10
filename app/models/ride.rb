@@ -15,14 +15,21 @@ class Ride
         @@all
     end
 
-    def self.average_distance
+    def self.total_d
         total_distance = []
         Ride.all.select do |rides|
         total_distance << rides.distance
-        total_distance.sum(0.0)
         end
-        total_distance
+        total_distance.sum
         # Returns the average distance across ALL rides
+    end
+
+    def self.average_distance
+        ride_count = []
+        Ride.all.select do |rides|
+        ride_count << rides.distance
+        end
+        total_d / ride_count.length 
     end
 
 end
