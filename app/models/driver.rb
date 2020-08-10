@@ -23,7 +23,7 @@ class Driver
 
     def rides
         my_rides = []
-        Ride.alls.select do |ride|
+        Ride.all.select do |ride|
             if ride.driver == self
                 my_rides.push(ride)
             end
@@ -34,7 +34,7 @@ class Driver
     def self.mileage_cap(distance)
         ##
         total_distance = Hash.new(0)
-        Ride.each do |ride|
+        Ride.all.each do |ride|
             total_distance[ride.driver] += ride.distance
         end
         total_distance.select {|k,v| v > distance}
