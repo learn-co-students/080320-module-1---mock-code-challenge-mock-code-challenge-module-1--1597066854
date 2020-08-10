@@ -28,11 +28,10 @@ class Passenger
   def total_distance
     all_rides = self.rides.map do |ride|
       ride.distance
-    end
-    length = all_rides.length
-    all_rides = all_rides.sum
-    all_rides/length
+    end.sum
   end
+
+  ##need to get the total distance for each person first
 
 end
 
@@ -40,15 +39,15 @@ end
 
 
 
-
-# - `Passenger#total_distance`
-#   - Returns the floating number that represents the total distance the passenger has travelled using the service
-
 # - `Passenger.premium_members`
 #   - Returns an array of all Passengers who have travelled over 100 miles in total with the service
 
 
 
+
+
+# - `Passenger#total_distance`
+#   - Returns the floating number that represents the total distance the passenger has travelled using the service
 # - `Passenger#name`
 #   - Returns the name of the passenger
 # - `Passenger#rides`
