@@ -19,6 +19,7 @@ ride1 = Ride.new(angela, tom, 50)
 ride2 = Ride.new(moe, larry, 25)
 ride3 = Ride.new(oscar, tom, 30)
 ride4 = Ride.new(angela, sally, 40)
+ride5 = Ride.new(angela, tom, 20)
 
 
 # Put your variables here~!

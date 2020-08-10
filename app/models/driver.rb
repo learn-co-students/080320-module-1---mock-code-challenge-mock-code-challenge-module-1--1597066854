@@ -11,4 +11,17 @@ class Driver
         @@all
     end
 
+    def rides
+        Ride.all.select do |rides|
+            rides.driver == self
+        end
+    end
+
+    def passenger_names
+        rides.map do |rides|
+            rides.passenger
+        end.uniq
+    end
+
+
 end 
