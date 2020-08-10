@@ -2,7 +2,7 @@
 
 class Ride
 
-    @@all = [];
+    @@all = []
 
     def self.all
         @@all;
@@ -11,9 +11,14 @@ class Ride
     attr_accessor :passenger, :driver, :distance
 
     def initialize(passenger, driver, distance)
-        @passenger = passenger;
-        @driver = driver;
-        @distance = distance.to_f;
+
+        if self.class.all.find{|r| r.passenger == passenger and r.driver == driver and r.distance == distance}
+            break;
+        else
+            @passenger = passenger;
+            @driver = driver;
+            @distance = distance.to_f;
+        end
 
         self.class.all.push(self);
     end
