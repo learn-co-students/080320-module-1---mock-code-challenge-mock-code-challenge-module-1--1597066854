@@ -5,6 +5,11 @@ def reload
 end
 
 
+
+jeff = Driver.new("Jeff")
+
+tim = Passenger.new("Tim")
+
 # Put your variables here~!
 
 binding.pry
