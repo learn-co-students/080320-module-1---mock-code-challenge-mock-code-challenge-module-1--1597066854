@@ -1,9 +1,9 @@
 
 class Driver
-    attr_reader :name
+    attr_reader :drivername
     @@all = []
-    def initialize(name)
-        @name = name
+    def initialize(drivername)
+        @drivername = drivername
         @@all << self
     end
     def self.all
