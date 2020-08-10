@@ -16,7 +16,7 @@ class Driver
     end 
 
     def self.mileage_cap(distance)
-        self.all.filter { |driver| driver.total_distance > distance }
+        Driver.all.filter { |driver| driver.total_distance > distance }
     end 
 
     ##instance methods

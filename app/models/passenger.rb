@@ -15,7 +15,7 @@ class Passenger
     end 
 
     def self.premium_members
-        self.all.filter { | passenger| passenger.total_distance > 100 }
+        Passenger.all.filter { |passenger| passenger.total_distance > 100 }
     end 
 
     ##instance methods
