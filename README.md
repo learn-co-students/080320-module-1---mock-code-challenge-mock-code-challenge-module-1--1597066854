@@ -1,5 +1,8 @@
 kainan doneson
 
+-ride is the join table
+
+
 # BetterLyft™ 
 
 ## Deliverables
