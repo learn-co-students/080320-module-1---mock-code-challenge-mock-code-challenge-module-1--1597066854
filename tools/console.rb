@@ -12,4 +12,6 @@ d1 =
 
 ###### PASSENGER ######
 ###### RIDE ######
+
+r1 = 
 binding.pry
