@@ -29,7 +29,7 @@ class Passenger
         distance_array = []
         Ride.all.filter do |ride_info|
             if ride_info.passenger == self
-                ride_info.distance << distance_array
+                distance_array << ride_info.distance
             end
         end
         distance_array.inject(0){|sum,x| sum + x }

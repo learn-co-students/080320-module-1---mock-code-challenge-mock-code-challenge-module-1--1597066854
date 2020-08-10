@@ -13,7 +13,7 @@ class Driver
         passengers = []
         Ride.all.filter do |ride_info|
             if ride_info.driver == self
-                ride_info.passenger << passengers
+                passengers << ride_info.passenger
             end
         end
         passengers.uniq
@@ -33,7 +33,7 @@ class Driver
         mileage_array = []
         Ride.all.filter do |ride_info|
            if ride_info.distance > distance
-            ride_info.driver << mileage_array
+            mileage_array << ride_info.driver
            end
         end
         mileage_array
